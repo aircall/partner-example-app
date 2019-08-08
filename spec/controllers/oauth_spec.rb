@@ -3,7 +3,7 @@
 describe Controllers::Oauth, type: :controller do
   describe 'GET /install' do
     let(:consent_page_uri) do
-      "https://dashboard-v2.aircall.io/oauth/authorize?client_id=foo&redirect_uri=https://test.com&response_type=code&scope=public_api"
+      'https://dashboard-v2.aircall.io/oauth/authorize?client_id=foo&redirect_uri=https://test.com&response_type=code&scope=public_api'
     end
 
     before do
@@ -31,8 +31,8 @@ describe Controllers::Oauth, type: :controller do
       end
       let(:create_access_token_response) do
         {
-          access_token: "2d492d492d492d492d492d492d492d492d492d49",
-          token_type: "Bearer",
+          access_token: '2d492d492d492d492d492d492d492d492d492d49',
+          token_type: 'Bearer',
           created_at: Time.now.to_i
         }
       end
@@ -65,7 +65,8 @@ describe Controllers::Oauth, type: :controller do
 
         it 'returns a success' do
           expect(last_response).to be_redirect
-          expect(last_response.headers['Location']).to eq(ENV['AIRCALL_SUCCESS_PAGE_URL'])
+          expect(last_response.headers['Location'])
+            .to eq(ENV['AIRCALL_SUCCESS_PAGE_URL'])
         end
       end
 

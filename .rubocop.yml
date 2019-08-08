@@ -1,0 +1,51 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - .gemspec/**/*
+    - .bundle/**/*
+    - 'lib/**/*.rb'
+
+RSpec/FilePath:
+  CustomTransform:
+    RuboCop: rubo_cop
+    Rspec: r_spec
+
+LineLength:
+  Max: 120
+
+Documentation:
+  Enabled: true
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/MethodLength:
+  Max: 25
+
+RSpec/NestedGroups:
+  Max: 5
+
+Layout/ClassStructure:
+  Enabled: true
+  Categories:
+    attributes:
+      - attribute
+      - attr_reader
+      - attr_writer
+      - attr_accessor
+  ExpectedOrder:
+    - attributes
+    - constants
+    - class_methods
+    - initializer
+    - public_methods
+    - protected_methods
+    - private_methods

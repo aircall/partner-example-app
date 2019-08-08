@@ -25,7 +25,9 @@ Dir[File.expand_path('fixtures/**/*.rb', __dir__)].each { |f| require f }
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include Rack::Test::Methods
-  def app() described_class end
+  def app
+    described_class
+  end
 
   config.filter_run_when_matching :focus
   # rspec-expectations config goes here. You can use an alternate

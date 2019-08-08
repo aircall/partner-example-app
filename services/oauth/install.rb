@@ -29,7 +29,7 @@ module Services
       private
 
       def hash_to_query_params(hash)
-        URI::encode(hash.map { |p| p.join('=') }.join('&'))
+        hash.map { |p| p.join('=') }.join('&')
       end
 
       def build_consent_page_uri(host, params)

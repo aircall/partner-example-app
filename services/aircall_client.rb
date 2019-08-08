@@ -3,7 +3,6 @@
 module Services
   # Client class to consume Aircall public API
   class AircallClient
-
     # Calls the create access token endpoint
     # @see https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works/#4-get-an-access-token
     def create_access_token(authorization_code:)
@@ -39,7 +38,7 @@ module Services
     def client(token: nil)
       client = Faraday.new(url: ENV['AIRCALL_PUBLIC_API_HOST']) do |faraday|
         faraday.authorization :Bearer, token if token
-        faraday.adapter  Faraday.default_adapter
+        faraday.adapter Faraday.default_adapter
         faraday.headers['Content-Type'] = 'application/json'
       end
 
