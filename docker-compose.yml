@@ -1,0 +1,39 @@
+---
+version: '3.7'
+
+services:
+  puma:
+    build:
+      context: .
+    command: |
+      bash -c "bundle exec guard --no-interactions -g puma"
+    volumes:
+      - .:/app
+    ports:
+      - 3000:9292
+    tty: true
+    stdin_open: true
+    env_file: .env
+
+  test:
+    build:
+      context: .
+    command: |
+      bash -c "bundle exec guard --no-interactions -g test"
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/app:cached
+    env_file: .env
+
+  doc:
+    build:
+      context: .
+    command: |
+      bash -c "bundle exec yardoc && \
+               yard server --reload"
+    volumes:
+      - .:/app:cached
+    ports:
+      - 3011:8808
+    env_file: .env

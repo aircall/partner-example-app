@@ -1,0 +1,20 @@
+## Environment variables
+.env
+
+## Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+.env
+
+## TMP folder
+tmp
+
+## Test coverage stats
+coverage
+
+## Environment normalization:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
