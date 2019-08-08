@@ -1,0 +1,5 @@
+-e lib/yard.rb
+--no-progress
+--plugin yard-sinatra
+controllers/**/*.rb
+services/**/*.rb
