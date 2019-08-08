@@ -13,7 +13,7 @@ services:
       - 3000:9292
     tty: true
     stdin_open: true
-    env_file: .env
+    env_file: .env.development
 
   test:
     build:
@@ -24,7 +24,7 @@ services:
     stdin_open: true
     volumes:
       - .:/app:cached
-    env_file: .env
+    env_file: .env.test
 
   doc:
     build:
@@ -36,4 +36,3 @@ services:
       - .:/app:cached
     ports:
       - 3011:8808
-    env_file: .env

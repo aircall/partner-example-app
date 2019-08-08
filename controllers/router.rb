@@ -11,7 +11,8 @@ module Controllers
       # @return [Rack::URLMap] a URLMap describing routes of the application
       def self.routes
         Rack::URLMap.new(
-          '/' => Base.new
+          '/' => Base.new,
+          '/oauth' => Oauth.new
         )
       end
   end

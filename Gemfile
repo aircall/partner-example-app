@@ -4,10 +4,10 @@ source 'https://rubygems.org'
 
 ruby '2.6.1'
 
+gem 'dry-auto_inject'
 gem 'puma', '>= 3.12', '< 5.0'
 gem 'sinatra', '~> 2.0'
 gem 'sinatra-contrib', '~> 2.0'
-gem 'dry-auto_inject'
 
 group :development, :test do
   gem 'guard'
