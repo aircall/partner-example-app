@@ -64,7 +64,8 @@ describe Controllers::Oauth, type: :controller do
         end
 
         it 'returns a success' do
-          expect(last_response).to be_ok
+          expect(last_response).to be_redirect
+          expect(last_response.headers['Location']).to eq(ENV['AIRCALL_SUCCESS_PAGE_URL'])
         end
       end
 

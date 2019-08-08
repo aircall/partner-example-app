@@ -23,7 +23,7 @@ module Services
         }
 
         # Build and return the consent page URI with the GET params
-        build_consent_page_uri(ENV['AIRCALL_CONSENT_PAGE_HOST'], oauth_params)
+        build_consent_page_uri(ENV['AIRCALL_CONSENT_PAGE_URL'], oauth_params)
       end
 
       private

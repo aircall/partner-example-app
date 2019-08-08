@@ -40,6 +40,7 @@ module Services
       client = Faraday.new(url: ENV['AIRCALL_PUBLIC_API_HOST']) do |faraday|
         faraday.authorization :Bearer, token if token
         faraday.adapter  Faraday.default_adapter
+        faraday.headers['Content-Type'] = 'application/json'
       end
 
       client

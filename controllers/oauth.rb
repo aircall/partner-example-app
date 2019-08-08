@@ -44,7 +44,7 @@ module Controllers
       # Do something with the token, like creating a webhook
       webhooks_create.call(access_token)
 
-      status 200
+      redirect ENV['AIRCALL_SUCCESS_PAGE_URL']
     end
   end
 end
