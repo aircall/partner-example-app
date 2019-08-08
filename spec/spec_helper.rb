@@ -13,6 +13,8 @@ end
 
 require 'bundler/setup'
 require 'rack/test'
+require 'webmock/rspec'
+WebMock.disable_net_connect!
 
 require File.expand_path('../app.rb', __dir__)
 

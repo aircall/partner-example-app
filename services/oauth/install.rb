@@ -33,7 +33,7 @@ module Services
       end
 
       def build_consent_page_uri(host, params)
-        "#{host}?#{hash_to_query_params(params)}"
+        host + '?' + hash_to_query_params(params)
       end
     end
   end

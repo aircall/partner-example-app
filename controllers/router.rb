@@ -12,7 +12,8 @@ module Controllers
       def self.routes
         Rack::URLMap.new(
           '/' => Base.new,
-          '/oauth' => Oauth.new
+          '/oauth' => Oauth.new,
+          '/webhooks' => Webhooks.new
         )
       end
   end

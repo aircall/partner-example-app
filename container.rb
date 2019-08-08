@@ -7,7 +7,12 @@ class Container
   namespace('services') do
     namespace('oauth') do
       register('install') { Services::Oauth::Install.new }
+      register('create_access_token') { Services::Oauth::CreateAccessToken.new }
     end
+    namespace('webhooks') do
+      register('create') { Services::Webhooks::Create.new }
+    end
+    register('aircall_client') { Services::AircallClient.new }
   end
 end
 
