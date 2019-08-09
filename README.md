@@ -44,3 +44,5 @@ Clone the repo, then run:
 You need to have a `.env` file at the root of the folder with all variables described in `.env.test`
 Fill your OAuth client id and secret with the values provided by Aircall. If you don't have those, fill in [this form](https://aircall.io/partners/registration/) and
 we'll be in touch.
+
+In order to launch the tests, you will need a `.env.test` file at the root of the folder with all variables described in `.env.example`. You can use any value for the env variables in the test environment.
