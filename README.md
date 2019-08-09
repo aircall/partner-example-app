@@ -35,10 +35,6 @@ In this example, the `call.created` event is subscribed to, so `POST /webhooks` 
 
 Pre-requesites: a running Docker engine.
 
-Clone the repo, then run:
-- `docker-compose up --build` to launch the server. Whenever a file is changed, the server is restarted, tests are re-runned and doc is generated.
-- `docker-compose down` to stop all containers created by `up`
-
 ### Environment variables
 
 You need to have a `.env` file at the root of the folder with all variables described in `.env.test`
@@ -46,3 +42,10 @@ Fill your OAuth client id and secret with the values provided by Aircall. If you
 we'll be in touch.
 
 In order to launch the tests, you will need a `.env.test` file at the root of the folder with all variables described in `.env.example`. You can use any value for the env variables in the test environment.
+
+### Running the app
+
+Once your environment variables are setup, you can use:
+- `docker-compose up --build` to launch the server. Whenever a file is changed, the server is restarted, tests are re-runned and doc is generated.
+- `docker-compose down` to stop all containers created by `up`
+
