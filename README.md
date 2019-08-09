@@ -49,3 +49,6 @@ Once your environment variables are setup, you can use:
 - `docker-compose up --build` to launch the server. Whenever a file is changed, the server is restarted, tests are re-runned and doc is generated.
 - `docker-compose down` to stop all containers created by `up`
 
+Once the app is running, head to `localhost:3000/oauth/install` to launch the OAuth flow.
+You can visit `localhost:3011` to see the YARD documentation of the project.
+
