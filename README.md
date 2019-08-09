@@ -1,4 +1,4 @@
-# Partner Example App
+# 🚀 Partner Example App
 A partner application example that performs Aircall's OAuth flow and subscribes to webhook events on the Public API.
 
 ## What is this?
