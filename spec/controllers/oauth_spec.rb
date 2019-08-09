@@ -3,7 +3,7 @@
 describe Controllers::Oauth, type: :controller do
   describe 'GET /install' do
     let(:consent_page_uri) do
-      'https://dashboard-v2.aircall.io/oauth/authorize?client_id=foo&redirect_uri=https://test.com&response_type=code&scope=public_api'
+      "#{ENV['AIRCALL_CONSENT_PAGE_URL']}?client_id=#{ENV['CLIENT_ID']}&redirect_uri=#{ENV['REDIRECT_URI']}&response_type=code&scope=public_api"
     end
 
     before do
