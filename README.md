@@ -37,7 +37,7 @@ Pre-requesites: a running Docker engine.
 
 ### Environment variables
 
-You need to have a `.env` file at the root of the folder with all variables described in `.env.test`
+You need to have a `.env` file at the root of the folder with all variables described in `.env.example`
 Fill your OAuth client id and secret with the values provided by Aircall. If you don't have those, fill in [this form](https://aircall.io/partners/registration/) and
 we'll be in touch.
 
