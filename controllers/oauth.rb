@@ -34,6 +34,7 @@ module Controllers
 
       # Create the access token from the authorization code
       access_token = oauth_create_access_token.call(authorization_code)
+      # You will probably want to store the access_token
 
       unless access_token
         error_body = { error: 'Access token creation failed' }
