@@ -1,6 +1,8 @@
 # 🚀 Partner Example App
 A partner application example that performs Aircall's OAuth flow and subscribes to webhook events on the Public API.
 
+Want to build an integration with Aircall? Check out our [API documentation](https://developer.aircall.io)
+
 ## What is this?
 
 This app is an example of how you can easily connect to Aircall's ecosystem.
